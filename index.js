@@ -10,7 +10,7 @@ function draw1(arr) {
         arr.forEach((row, i) => {
             row.forEach((column, j) => {
                 ctx.fillStyle = "#" + column;
-                ctx.fillRect(j * 128, i * 128, (j + 1) * 128, (i + 1) * 128);
+                ctx.fillRect(j * (512 / arr.length), i * (512 / arr.length), (j + 1) * (512 / arr.length), (i + 1) * (512 / arr.length));
             })
         })
     }
@@ -23,7 +23,7 @@ function draw2(arr) {
         arr.forEach((row, i) => {
             row.forEach((column, j) => {
                 ctx.fillStyle = "rgba(" + column + ")";
-                ctx.fillRect(j * 16, i * 16, (j + 1) * 16, (i + 1) * 16);
+                ctx.fillRect(j * (512 / arr.length), i * (512 / arr.length), (j + 1) * (512 / arr.length), (i + 1) * (512 / arr.length));
             })
         })
     }
@@ -38,7 +38,6 @@ button1.addEventListener('click', () => {
     xhr.onload = () => {
         arr = xhr.response;
         draw1(arr);
-        alert(arr);
     }
 })
 
@@ -51,6 +50,16 @@ button2.addEventListener('click', () => {
     xhr.onload = () => {
         arr = xhr.response;
         draw2(arr);
-        alert(arr);
+    }
+})
+
+button3.addEventListener('click', () => {
+    let image = document.createElement('img');
+    image.setAttribute('src','https://raw.githubusercontent.com/rolling-scopes-school/tasks/master/tasks/stage-2/codejam-canvas/data/image.png');
+    image.onload = () => {
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(image, 0, 0, 512, 512);
+        }
     }
 })
