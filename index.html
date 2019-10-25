@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>codejam-canvas</title>
+    <script src="./index.js" defer></script>
+    <link href="./style.css" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
@@ -17,30 +19,30 @@
         <aside class="options">
           <section class="options--actions">
             <ul class="options--list">
-              <li class="options--list-item"><img src="./assets/images/paint.svg" alt="icon"><span>Paint bucket</span></li>
-              <li class="options--list-item"><img src="./assets/images/choose.svg" alt="icon"><span>Choose color</span></li>
-              <li class="options--list-item"><img src="./assets/images/move.svg" alt="icon"><span>Move</span></li>
-              <li class="options--list-item"><img src="./assets/images/transform.svg" alt="icon"><span>Transform</span></li>
+              <li class="options--list-item"><img src="./assets/images/paint.svg" alt="icon"><div><span>Paint bucket</span></div></li>
+              <li class="options--list-item"><img src="./assets/images/choose.svg" alt="icon"><div><span>Choose color</span></div></li>
+              <li class="options--list-item"><img src="./assets/images/move.svg" alt="icon"><div><span>Move</span></div></li>
+              <li class="options--list-item"><img src="./assets/images/transform.svg" alt="icon"><div><span>Transform</span></div></li>
             </ul>
           </section>
           <section class="options--colors">
             <ul class="options--list">
-              <li class="options--list-item"><div class="circle"></div><span>Current color</span></li>
-              <li class="options--list-item"><div class="circle"></div><span>Prev color</span></li>
-              <li class="options--list-item"><div class="circle"></div><span>red</span></li>
-              <li class="options--list-item"><div class="circle"></div><span>blue</span></li>
+              <li class="options--list-item"><div class="options--circle gray"></div><div><span>Current color</span></div></li>
+              <li class="options--list-item"><div class="options--circle green"></div><div><span>Prev color</span></div></li>
+              <li class="options--list-item"><div class="options--circle red"></div><div><span>red</span></div></li>
+              <li class="options--list-item"><div class="options--circle blue"></div><div><span>blue</span></div></li>
             </ul>
           </section>
         </aside>
         <section class="content">
           <canvas height="512" width="512" class="content--canvas" id="canvas">UPDATE YOUR BROWSER</canvas>
           <div class="content--buttons">
-            <div class="button">SHOW 4x4</div>
-            <div class="button">SHOW 32x32</div>
-            <div class="button">SHOW IMG</div>
+            <div class="content--button" id="fourx">SHOW 4x4</div>
+            <div class="content--button" id="thirtytwox">SHOW 32x32</div>
+            <div class="content--button" id="img">SHOW IMG</div>
           </div>
         </section>
       </main>
-    </<span>
+    </div>
   </body>
 </html>
