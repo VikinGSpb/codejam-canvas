@@ -159,6 +159,7 @@
   width: 150px;
   height: 150px;
   color: rgba(0, 0, 0, 0.541327);
+  list-style: none;
   -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.12);
 }
