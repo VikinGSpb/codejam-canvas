@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>codejam-canvas</title>
+    <script src="./index.js" defer></script>
+    <link href="./style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <figure class="header__nav"><img src="./assets/images/nav.svg" alt="icon"></figure>
+        <div class="header__title"><span>CodeJam - Pallete</span></div>
+        <figure class="header__menu"><img src="./assets/images/menu.svg" alt="icon"></figure>
+      </header>
+      <main class="main">
+        <aside class="options">
+          <section class="options__actions">
+            <ul class="options__list">
+              <li class="options__list_item"><img src="./assets/images/paint.svg" alt="icon"><div><span>Paint bucket</span></div></li>
+              <li class="options__list_item"><img src="./assets/images/choose.svg" alt="icon"><div><span>Choose color</span></div></li>
+              <li class="options__list_item"><img src="./assets/images/move.svg" alt="icon"><div><span>Move</span></div></li>
+              <li class="options__list_item"><img src="./assets/images/transform.svg" alt="icon"><div><span>Transform</span></div></li>
+            </ul>
+          </section>
+          <section class="options__colors">
+            <ul class="options__list">
+              <li class="options__list_item"><div class="options__circle gray"></div><div><span>Current color</span></div></li>
+              <li class="options__list_item"><div class="options__circle green"></div><div><span>Prev color</span></div></li>
+              <li class="options__list_item"><div class="options__circle red"></div><div><span>red</span></div></li>
+              <li class="options__list_item"><div class="options__circle blue"></div><div><span>blue</span></div></li>
+            </ul>
+          </section>
+        </aside>
+        <section class="content">
+          <canvas height="512" width="512" class="content__canvas" id="canvas">UPDATE YOUR BROWSER</canvas>
+          <ul class="content__buttons">
+            <li class="content__button" canvasButton="4x4" id="fourx">SHOW 4x4</li>
+            <li class="content__button" canvasButton="32x32" id="thirtytwox">SHOW 32x32</li>
+            <li class="content__button" id="img">SHOW IMG</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
